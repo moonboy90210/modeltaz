@@ -1,6 +1,3 @@
-// ===================================
-// MODEL PORTFOLIO INTERACTIVE FEATURES
-// ===================================
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();

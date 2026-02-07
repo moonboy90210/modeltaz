@@ -1,7 +1,3 @@
-/* ===================================
-   CSS VARIABLES
-   =================================== */
-
 :root {
     /* Colors - Refined Monochrome Palette */
     --color-bg-primary: #ffffff;
@@ -74,17 +70,12 @@ a {
    =================================== */
 
 .navbar {
-    background: rgba(255, 255, 255, 0.95);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--color-border);
-    transition: var(--transition-base);
-}
-
-.navbar.scrolled {
+    background: transparent;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
     padding: 1rem 0;
-    box-shadow: var(--shadow-subtle);
+    /* border-bottom: 1px solid var(--color-border); */
+    transition: var(--transition-base);
 }
 
 .navbar-brand {
@@ -92,7 +83,18 @@ a {
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    color: var(--color-text-primary);
+    color: var(--color-bg-primary);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar-toggler:focus {
+    color: #fff;
 }
 
 .navbar-nav {
@@ -105,9 +107,13 @@ a {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-text-primary);
+    color: var(--color-bg-primary);
     position: relative;
     padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: #fff;
 }
 
 .nav-link::after {
@@ -117,7 +123,7 @@ a {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--color-accent);
+    background: var(--color-bg-primary);
     transition: var(--transition-base);
 }
 
@@ -133,7 +139,7 @@ a {
 }
 
 .social-icons a {
-    color: var(--color-text-primary);
+    color: var(--color-bg-primary);
     font-size: 1.125rem;
     transition: var(--transition-base);
 }
@@ -143,10 +149,38 @@ a {
     transform: translateY(-2px);
 }
 
+/* Scrolled */
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding: 1.5rem 0;
+    box-shadow: var(--shadow-subtle);
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link,
+.navbar.scrolled .social-icons a {
+    color: #000;
+}
+
+.navbar.scrolled .nav-link::after {
+    background: #000;
+}
+
+.navbar.scrolled .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+    filter: invert(0);
+}
+
 
 /* ===================================
    BACKGROUND EFFECTS
-   =================================== */
+   ===================================
+*/
 
 .grain-texture {
     position: fixed;
@@ -159,8 +193,6 @@ a {
     pointer-events: none;
     z-index: 100;
 }
-
-
 
 /* ===================================
    HERO SECTION
@@ -719,6 +751,11 @@ textarea.form-control {
     :root {
         --spacing-xl: 4rem;
         --spacing-xxl: 6rem;
+    }
+
+    .navbar {
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
     }
 
     .navbar-nav {
