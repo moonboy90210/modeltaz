@@ -197,8 +197,8 @@ function initFormValidation() {
             e.preventDefault();
             
             // Get form data
-            const formData = new FormData(form);
-            const submitBtn = form.querySelector('button[type="submit"]');
+            // const formData = new FormData(form);
+            // const submitBtn = form.querySelector('button[type="submit"]');
             
             // Disable submit button
             submitBtn.disabled = true;
