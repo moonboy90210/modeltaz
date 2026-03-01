@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initNavbarScroll(); 
     initScrollAnimations();
-    initFormValidation();
+    // initFormValidation();
 });
 
 // ===================================
@@ -189,40 +189,40 @@ portfolioLinks.forEach(link => {
 // FORM VALIDATION & SUBMISSION
 // ===================================
 
-function initFormValidation() {
-    const form = document.querySelector('.contact-form');
+// function initFormValidation() {
+//     const form = document.querySelector('.contact-form');
     
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+//     if (form) {
+//         form.addEventListener('submit', (e) => {
+//             e.preventDefault();
             
-            // Get form data
-            // const formData = new FormData(form);
-            // const submitBtn = form.querySelector('button[type="submit"]');
+//             // Get form data
+//             // const formData = new FormData(form);
+//             // const submitBtn = form.querySelector('button[type="submit"]');
             
-            // Disable submit button
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Sending...';
+//             // Disable submit button
+//             submitBtn.disabled = true;
+//             submitBtn.innerHTML = 'Sending...';
             
-            // Simulate form submission
-            setTimeout(() => {
-                // Success feedback
-                submitBtn.innerHTML = 'Message Sent! ✓';
-                submitBtn.style.background = '#2ecc71';
+//             // Simulate form submission
+//             setTimeout(() => {
+//                 // Success feedback
+//                 submitBtn.innerHTML = 'Message Sent! ✓';
+//                 submitBtn.style.background = '#2ecc71';
                 
-                // Reset form
-                form.reset();
+//                 // Reset form
+//                 form.reset();
                 
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = 'Send Message <span class="btn-arrow">→</span>';
-                    submitBtn.style.background = '';
-                }, 3000);
-            }, 1500);
-        });
-    }
-}
+//                 // Reset button after 3 seconds
+//                 setTimeout(() => {
+//                     submitBtn.disabled = false;
+//                     submitBtn.innerHTML = 'Send Message <span class="btn-arrow">→</span>';
+//                     submitBtn.style.background = '';
+//                 }, 3000);
+//             }, 1500);
+//         });
+//     }
+// }
 
 // ===================================
 // GALLERY PARALLAX EFFECT
